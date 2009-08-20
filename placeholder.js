@@ -19,21 +19,21 @@ var InputPlaceholder = function(input, color) {
       input.style.color = color;
   }
 
-  input.onfocus = function(){
+  input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'focus', function(){
     this.style.color = '';
-      if (this.value == this.getAttribute('placeholder')) {
-          this.value = '';
-      }
-  };
+    if (this.value == this.getAttribute('placeholder')) {
+      this.value = '';
+    }
+  }, false);
 
-  input.onblur = function(){
+  input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'blur', function(){
       if (this.value === '') {
           this.value = this.getAttribute('placeholder');
           this.style.color = color;
       } else {
           this.style.color = '';
       }
-  };
+  }, false);
 
-	return true;
+  return true;
 };
