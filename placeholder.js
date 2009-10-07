@@ -1,10 +1,12 @@
 /**
- * @example InputPlaceholder( document.getElementById('my_input_element') )
+ * @example inputPlaceholder( document.getElementById('my_input_element') )
  * @param {Element} input
  * @param {String} color
- * @return {Boolean}
+ * @return {Element} input
  */
-var InputPlaceholder = function(input, color) {
+var inputPlaceholder = function(input, color) {
+
+  if (!input) throw new Error('Argument missed');
 
   /**
    * Webkit browsers already implemented placeholder attribute.
@@ -35,5 +37,5 @@ var InputPlaceholder = function(input, color) {
       }
   }, false);
 
-  return true;
+  return input;
 };
