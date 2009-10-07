@@ -17,8 +17,8 @@ var inputPlaceholder = function(input, color) {
   var color = color || '#AAA';
 
   if (input.value === '' || input.value == input.getAttribute('placeholder')) {
-      input.value = input.getAttribute('placeholder');
-      input.style.color = color;
+    input.value = input.getAttribute('placeholder');
+    input.style.color = color;
   }
 
   input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'focus', function(){
@@ -29,12 +29,12 @@ var inputPlaceholder = function(input, color) {
   }, false);
 
   input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'blur', function(){
-      if (this.value === '') {
-          this.value = this.getAttribute('placeholder');
-          this.style.color = color;
-      } else {
-          this.style.color = '';
-      }
+    if (this.value === '') {
+      this.value = this.getAttribute('placeholder');
+      this.style.color = color;
+    } else {
+      this.style.color = '';
+    }
   }, false);
 
   return input;
