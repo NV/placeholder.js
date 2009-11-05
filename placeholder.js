@@ -12,7 +12,7 @@ function inputPlaceholder (input, color) {
    * Webkit browsers already implemented placeholder attribute.
    * This function useless for them.
    */
-  if (input.placeholder) return false;
+  if ('placeholder' in document.createElement('input')) return false;
 
   var color = color || '#AAA';
 
@@ -22,18 +22,18 @@ function inputPlaceholder (input, color) {
   }
 
   input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'focus', function(){
-    this.style.color = '';
-    if (this.value == this.getAttribute('placeholder')) {
-      this.value = '';
+    input.style.color = '';
+    if (input.value == input.getAttribute('placeholder')) {
+      input.value = '';
     }
   }, false);
 
   input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'blur', function(){
-    if (this.value === '') {
-      this.value = this.getAttribute('placeholder');
-      this.style.color = color;
+    if (input.value === '') {
+      input.value = input.getAttribute('placeholder');
+      input.style.color = color;
     } else {
-      this.style.color = '';
+      input.style.color = '';
     }
   }, false);
 
