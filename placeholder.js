@@ -21,14 +21,16 @@ function inputPlaceholder (input, color) {
     input.style.color = color;
   }
 
-  input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'focus', function(){
+  var add_event = /*@cc_on'attachEvent'||@*/'addEventListener';
+
+  input[add_event](/*@cc_on'on'+@*/'focus', function(){
     input.style.color = '';
     if (input.value == input.getAttribute('placeholder')) {
       input.value = '';
     }
   }, false);
 
-  input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'blur', function(){
+  input[add_event](/*@cc_on'on'+@*/'blur', function(){
     if (input.value === '') {
       input.value = input.getAttribute('placeholder');
       input.style.color = color;
@@ -37,7 +39,7 @@ function inputPlaceholder (input, color) {
     }
   }, false);
 
-  input.form && input.form[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'submit', function(){
+  input.form && input.form[add_event](/*@cc_on'on'+@*/'submit', function(){
     if (input.value == input.getAttribute('placeholder')) {
       input.value = '';
     }
