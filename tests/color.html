@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>color override</title>
+  <style type="text/css">
+  input {font-size:2em; color:red}
+  </style>
+</head>
+<body>
+  <form>
+    <input placeholder="Yaba-daba-doo" id="pass" style="color:green" />
+  </form>
+  <p>Color focused input must be <span style="color:green">green</span>, not <span style="color:red">red</span>.</p>
+  <script src="http://github.com/NV/placeholder.js/raw/master/placeholder.js"></script>
+  <script type="text/javascript">
+  window.onload = function(){
+    inputPlaceholder( document.getElementById('pass') )
+  };
+  </script>
+</body>
+</html>
