@@ -37,5 +37,11 @@ function inputPlaceholder (input, color) {
     }
   }, false);
 
+  input.form && input.form[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'submit', function(){
+    if (input.value == input.getAttribute('placeholder')) {
+      input.value = '';
+    }
+  }, false);
+
   return input;
 };
