@@ -12,7 +12,7 @@ function inputPlaceholder (input, color) {
    * Webkit browsers already implemented placeholder attribute.
    * This function useless for them.
    */
-  if ('placeholder' in document.createElement('input')) return input;
+  if (input.placeholder && 'placeholder' in document.createElement('input')) return input;
 
   var color = color || '#AAA';
 
