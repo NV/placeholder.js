@@ -16,9 +16,10 @@ function inputPlaceholder (input, color) {
 
   var placeholder_color = color || '#AAA';
   var default_color = input.style.color;
+  var placeholder = input.getAttribute('placeholder');
 
-  if (input.value === '' || input.value == input.getAttribute('placeholder')) {
-    input.value = input.getAttribute('placeholder');
+  if (input.value === '' || input.value == placeholder) {
+    input.value = placeholder;
     input.style.color = placeholder_color;
   }
 
@@ -26,14 +27,14 @@ function inputPlaceholder (input, color) {
 
   input[add_event](/*@cc_on'on'+@*/'focus', function(){
     input.style.color = default_color;
-    if (input.value == input.getAttribute('placeholder')) {
+    if (input.value == placeholder) {
       input.value = '';
     }
   }, false);
 
   input[add_event](/*@cc_on'on'+@*/'blur', function(){
     if (input.value === '') {
-      input.value = input.getAttribute('placeholder');
+      input.value = placeholder;
       input.style.color = placeholder_color;
     } else {
       input.style.color = default_color;
@@ -41,7 +42,7 @@ function inputPlaceholder (input, color) {
   }, false);
 
   input.form && input.form[add_event](/*@cc_on'on'+@*/'submit', function(){
-    if (input.value == input.getAttribute('placeholder')) {
+    if (input.value == placeholder) {
       input.value = '';
     }
   }, false);
