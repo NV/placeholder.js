@@ -14,17 +14,18 @@ function inputPlaceholder (input, color) {
    */
   if (input.placeholder && 'placeholder' in document.createElement('input')) return input;
 
-  var color = color || '#AAA';
+  var placeholder_color = color || '#AAA';
+  var default_color = input.style.color;
 
   if (input.value === '' || input.value == input.getAttribute('placeholder')) {
     input.value = input.getAttribute('placeholder');
-    input.style.color = color;
+    input.style.color = placeholder_color;
   }
 
   var add_event = /*@cc_on'attachEvent'||@*/'addEventListener';
 
   input[add_event](/*@cc_on'on'+@*/'focus', function(){
-    input.style.color = '';
+    input.style.color = default_color;
     if (input.value == input.getAttribute('placeholder')) {
       input.value = '';
     }
@@ -33,9 +34,9 @@ function inputPlaceholder (input, color) {
   input[add_event](/*@cc_on'on'+@*/'blur', function(){
     if (input.value === '') {
       input.value = input.getAttribute('placeholder');
-      input.style.color = color;
+      input.style.color = placeholder_color;
     } else {
-      input.style.color = '';
+      input.style.color = default_color;
     }
   }, false);
 
