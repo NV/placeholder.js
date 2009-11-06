@@ -48,4 +48,4 @@ function inputPlaceholder (input, color) {
   }, false);
 
   return input;
-};
+}
