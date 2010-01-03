@@ -12,30 +12,40 @@ function inputPlaceholder (input, color) {
    * Webkit browsers already implemented placeholder attribute.
    * This function useless for them.
    */
-  if (input.placeholder) return false;
+  if (input.placeholder && 'placeholder' in document.createElement(input.tagName)) return input;
 
-  var color = color || '#AAA';
+  var placeholder_color = color || '#AAA';
+  var default_color = input.style.color;
+  var placeholder = input.getAttribute('placeholder');
 
-  if (input.value === '' || input.value == input.getAttribute('placeholder')) {
-    input.value = input.getAttribute('placeholder');
-    input.style.color = color;
+  if (input.value === '' || input.value == placeholder) {
+    input.value = placeholder;
+    input.style.color = placeholder_color;
   }
 
-  input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'focus', function(){
-    this.style.color = '';
-    if (this.value == this.getAttribute('placeholder')) {
-      this.value = '';
+  var add_event = /*@cc_on'attachEvent'||@*/'addEventListener';
+
+  input[add_event](/*@cc_on'on'+@*/'focus', function(){
+    input.style.color = default_color;
+    if (input.value == placeholder) {
+      input.value = '';
     }
   }, false);
 
-  input[/*@cc_on'attachEvent'||@*/'addEventListener'](/*@cc_on'on'+@*/'blur', function(){
-    if (this.value === '') {
-      this.value = this.getAttribute('placeholder');
-      this.style.color = color;
+  input[add_event](/*@cc_on'on'+@*/'blur', function(){
+    if (input.value === '') {
+      input.value = placeholder;
+      input.style.color = placeholder_color;
     } else {
-      this.style.color = '';
+      input.style.color = default_color;
+    }
+  }, false);
+
+  input.form && input.form[add_event](/*@cc_on'on'+@*/'submit', function(){
+    if (input.value == placeholder) {
+      input.value = '';
     }
   }, false);
 
   return input;
-};
+}
