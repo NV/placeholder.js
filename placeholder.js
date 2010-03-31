@@ -8,19 +8,16 @@ function inputPlaceholder (input, color) {
 
   if (!input) return null;
 
-  /**
-   * Webkit browsers already implemented placeholder attribute.
-   * This function useless for them.
-   */
+  // Do nothing if placeholder supported by browser (Webkit, Firefox 3.7)
   if (input.placeholder && 'placeholder' in document.createElement(input.tagName)) return input;
 
-  var placeholder_color = color || '#AAA';
+  color = color || '#AAA';
   var default_color = input.style.color;
   var placeholder = input.getAttribute('placeholder');
 
   if (input.value === '' || input.value == placeholder) {
     input.value = placeholder;
-    input.style.color = placeholder_color;
+    input.style.color = color;
   }
 
   var add_event = /*@cc_on'attachEvent'||@*/'addEventListener';
@@ -35,7 +32,7 @@ function inputPlaceholder (input, color) {
   input[add_event](/*@cc_on'on'+@*/'blur', function(){
     if (input.value === '') {
       input.value = placeholder;
-      input.style.color = placeholder_color;
+      input.style.color = color;
     } else {
       input.style.color = default_color;
     }
