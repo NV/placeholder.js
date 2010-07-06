@@ -1,14 +1,14 @@
 /**
  * Example: inputPlaceholder( document.getElementById('my_input_element') )
  * @param {Element} input
- * @param {String} color
+ * @param {String} [color='#AAA']
  * @return {Element} input
  */
 function inputPlaceholder (input, color) {
 
   if (!input) return null;
 
-  // Do nothing if placeholder supported by browser (Webkit, Firefox 3.7)
+  // Do nothing if placeholder supported by the browser (Webkit, Firefox 3.7)
   if (input.placeholder && 'placeholder' in document.createElement(input.tagName)) return input;
 
   color = color || '#AAA';
