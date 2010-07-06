@@ -10,4 +10,4 @@ Placeholder.js fixes it!
 Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—10.5.
 
 Download [placeholder.js (pure JS)](http://nv.github.com/placeholder.js/placeholder.js) or
-[jquery.inputPlaceholder.js (jQuery plug-in)](http://nv.github.com/placeholder.js/jquery.inputPlaceholder.js).
+[jquery.textPlaceholder.js (jQuery plug-in)](http://nv.github.com/placeholder.js/jquery.textPlaceholder.js).

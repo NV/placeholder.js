@@ -1,7 +1,7 @@
 /**
  * @param {String} [color='#AAA'] placeholder text color
  */
-jQuery.fn.inputPlaceholder = function (color) {
+jQuery.fn.textPlaceholder = function (color) {
 
 	color = color || '#AAA';
 
