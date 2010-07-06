@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Submit placeholder value bug</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+<body>
+<form action="">
+  <input name="param" placeholder="yada-yada" id="param">
+  <input type="submit">
+</form>
+<p>Placeholder value must not be submitted</p>
+<script src="../../jquery.inputPlaceholder.js"></script>
+<script>
+$(function(){
+  if (location.search.indexOf('yada-yada') != -1) {
+    document.body.style.backgroundColor = 'darkred';
+  }
+  $("#param").inputPlaceholder();
+});
+</script>
+</body></html>

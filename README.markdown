@@ -1,12 +1,13 @@
 placeholder.js — bring HTML 5 placeholder attribute to all browsers
-=======================================================================
+===================================================================
 
-[![placeholder](http://github.com/NV/placeholder.js/raw/gh-pages/example.png)](http://nv.github.com/placeholder.js/)
+[![placeholder](http://nv.github.com/placeholder.js/example.png)](http://nv.github.com/placeholder.js/)
 
-Placeholder is a part of [HTML 5 specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder). Now only Webkit browsers support it. But with placeholder.js we can fix it.
+The placeholder attribute is the part on [HTML5 specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-placeholder).
+Currently, it works only in WebKit-based browsers, like Google Chrome and Safari.
+Placeholder.js fixes it!
 
-Tested on IE 6-8, Firefox 3.5, Safari 4, Google Chrome 3-4, Opera 9.5-10.
+Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—10.5.
 
-Download [placeholder.js](http://github.com/NV/placeholder.js/raw/gh-pages/placeholder.js).
-
-Licence: Public domain.
+Download [placeholder.js (pure JS)](http://nv.github.com/placeholder.js/placeholder.js) or
+[jquery.inputPlaceholder.js (jQuery plug-in)](http://nv.github.com/placeholder.js/jquery.inputPlaceholder.js).
