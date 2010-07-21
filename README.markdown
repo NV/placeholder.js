@@ -12,7 +12,7 @@ Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—
 
 ## [jquery.textPlaceholder.js](http://nv.github.com/placeholder.js/jquery.textPlaceholder.js)
 
-CSS: `<style>.text-placeholder {color: #AAA !important}</style>`
+CSS: `<style>.text-placeholder {color: #AAA !important}</style>`  
 JS: `$("[placeholder]").textPlaceholder();`
 
 [An example](http://nv.github.com/placeholder.js/tests/jquery/textarea.html).
