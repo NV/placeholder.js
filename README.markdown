@@ -9,5 +9,17 @@ Placeholder.js fixes it!
 
 Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—10.5.
 
-Download [placeholder.js (pure JS)](http://nv.github.com/placeholder.js/placeholder.js) or
-[jquery.textPlaceholder.js (jQuery plug-in)](http://nv.github.com/placeholder.js/jquery.textPlaceholder.js).
+
+## [jquery.textPlaceholder.js](http://nv.github.com/placeholder.js/jquery.textPlaceholder.js)
+
+CSS: `<style>.text-placeholder {color: #AAA !important}</style>`
+JS: `$("[placeholder]").textPlaceholder();`
+
+[An example](http://nv.github.com/placeholder.js/tests/jquery/textarea.html).
+
+
+## [placeholder.js](http://nv.github.com/placeholder.js/placeholder.js) (pure JS version)
+
+JS: `inputPlaceholder(document.getElementById('some_input'), "#AAA")`
+
+[An example](http://nv.github.com/placeholder.js/tests/textarea.html).

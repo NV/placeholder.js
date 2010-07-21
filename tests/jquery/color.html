@@ -4,8 +4,9 @@
   <title>color override</title>
   <style type="text/css">
   input {font-size:2em; color:red}
+  .text-placeholder {color: #AAA !important}
   </style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 <body>
   <form>
@@ -14,9 +15,9 @@
   <p>Color of focused input must be <span style="color:green">green</span>, not <span style="color:red">red</span>.</p>
   <script src="../../jquery.textPlaceholder.js"></script>
   <script>
-	$(function(){
-		$("#pass").textPlaceholder();
-	});
+  $(function(){
+    $("#pass").textPlaceholder();
+  });
   </script>
 </body>
 </html>
