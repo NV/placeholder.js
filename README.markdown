@@ -7,12 +7,12 @@ The placeholder attribute is the part of [HTML5 specification](http://www.whatwg
 Currently, it works only in WebKit-based browsers, like Google Chrome and Safari.
 Placeholder.js fixes it!
 
-Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—10.5.
+Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—10.6.
 
 
 ## [jquery.textPlaceholder.js](http://nv.github.com/placeholder.js/jquery.textPlaceholder.js)
 
-CSS: `<style>.text-placeholder {color: #AAA !important}</style>`  
+CSS: `.text-placeholder {color: #AAA !important}`  
 JS: `$("[placeholder]").textPlaceholder();`
 
 [An example](http://nv.github.com/placeholder.js/tests/jquery/textarea.html).
