@@ -1,3 +1,6 @@
+/**
+ * @see http://github.com/NV/placeholder.js
+ */
 jQuery.fn.textPlaceholder = function () {
 
 	return this.each(function(){
