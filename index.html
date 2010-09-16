@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="placeholder.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="jquery.textPlaceholder.js"></script>
 	<style type="text/css">
 	input {font-size: 1em}
 	html {background:#F0F0F0}
 	</style>
 </head>
 <body>
-	<input placeholder="inbox@disney.com" id="some_input">
+	<input placeholder="inbox@disney.com" id="disney_inbox">
 	<script type="text/javascript">
-	window.onload = function(){
-		inputPlaceholder( document.getElementById('some_input') )
-	}
+	$(function(){
+		$("#disney_inbox").textPlaceholder();
+	});
 	</script>
 </body>
 </html>
