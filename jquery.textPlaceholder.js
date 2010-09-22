@@ -10,7 +10,7 @@ jQuery.fn.textPlaceholder = function () {
 		if (that.placeholder && 'placeholder' in document.createElement(that.tagName)) return;
 
 		var placeholder = that.getAttribute('placeholder');
-		var input = $(that);
+		var input = jQuery(that);
 
 		if (that.value === '' || that.value == placeholder) {
 			input.addClass('text-placeholder');
@@ -33,7 +33,7 @@ jQuery.fn.textPlaceholder = function () {
 			}
 		});
 
-		that.form && $(that.form).submit(function(){
+		that.form && jQuery(that.form).submit(function(){
 			if (input.hasClass('text-placeholder')) {
 				that.value = '';
 			}
