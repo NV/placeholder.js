@@ -23,3 +23,8 @@ JS: `$("[placeholder]").textPlaceholder();`
 JS: `inputPlaceholder(document.getElementById('some_input'), "#AAA")`
 
 [An example](http://nv.github.com/placeholder.js/tests/textarea.html).
+
+
+## Limitations
+
+placeholder.js doesn't work for `<input type='password'>` in IE (at least in IE ≤ 9). If you need it use [danielstocks/jQuery-Placeholder](https://github.com/danielstocks/jQuery-Placeholder) instead.
