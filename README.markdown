@@ -1,6 +1,11 @@
 placeholder.js — bring HTML 5 placeholder attribute to all browsers
 ===================================================================
 
+placeholder.js is not maintained any more. Use one of those:
+
+  * [mathiasbynens/Placeholder-jQuery-Plugin](https://github.com/mathiasbynens/Placeholder-jQuery-Plugin)
+  * [danielstocks/jQuery-Placeholder](https://github.com/danielstocks/jQuery-Placeholder)
+
 [![placeholder](http://nv.github.com/placeholder.js/example.png)](http://nv.github.com/placeholder.js/)
 
 The placeholder attribute is the part of [HTML5 specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-placeholder).
@@ -8,7 +13,6 @@ Currently, it works only in WebKit-based browsers, like Google Chrome and Safari
 Placeholder.js fixes it!
 
 Tested on IE 6—8, Firefox 3.5, Safari 4—5, Google Chrome 3—6, Opera 9.5—10.6.
-
 
 ## [jquery.textPlaceholder.js](http://nv.github.com/placeholder.js/jquery.textPlaceholder.js)
 
@@ -27,4 +31,4 @@ JS: `inputPlaceholder(document.getElementById('some_input'), "#AAA")`
 
 ## Limitations
 
-placeholder.js doesn't work for `<input type='password'>` in IE (at least in IE ≤ 9). If you need it use [danielstocks/jQuery-Placeholder](https://github.com/danielstocks/jQuery-Placeholder) instead.
+placeholder.js doesn't work with `<input type='password'>` in IE (at least in IE ≤ 9).
